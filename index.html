@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+    <div class="nav">
+        <div class="logo">ello</div>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle">
+        <div class="navelements">
+            <a href="#">Business</a>
+            <a href="#">Services</a>
+            <a href="#">LearnMore</a>
+            <a href="#">Help</a>
+            <a href="#">Feedback</a>
+        </div>
+    </div>
+    </header>
+    <main>
+     <div class="card">
+        <div class="profile">
+            <img src="img/profilepic.jpg">
+        </div>
+        <div class="content">
+            <h2>Uday Pratap Chauhan<br><span>UI/UX Designer</span></h2>
+            <div class="data">
+                <h3>456<br>Posts</h3>
+                <h3>124k<br>Followers</h3>
+                <h3>1.5k<br>Following</h3>
+            </div>
+            <div class="actionbtn">
+                <button>Follow</button>
+                <button>Message</button>
+            </div>
+        </div>
+     </div>
+    </main>
+    
+</body>
+<style>
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    body{
+        background:url("img/bg1.jpg");
+    }
+    .nav{
+        border-bottom: 1px solid rgba(110, 110, 110, 0.507);
+        text-align: right;
+        min-height: 40px;
+        background: rgba(0, 0, 0, 0.438);
+        backdrop-filter: blur(12px);
+    }
+
+    .navelements{
+        padding-top: 5px;
+    }
+    .navelements a{
+        text-decoration: none;
+        color: rgba(224, 222, 216, 0.664);
+        padding-top: 20px;
+        padding-bottom: 10px;
+        margin: 10px 10px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    label{
+        margin: 0 40px 0 0;
+        font-size: 26px;
+        line-height: 40px;
+        display: none;
+        color: white;
+    }
+    #toggle{
+        display: none;
+    }
+    .logo{
+        color: white;
+        float: left;
+        padding-top: 6px;
+        padding-left:15px;
+        font-size: 25px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    @media only screen and (max-width: 500px){
+        label{
+            display: block;
+            cursor: pointer;
+        }
+        .navelements{
+            text-align: center;
+            width: 100%;
+            display: none;
+        }
+        .navelements a{
+            display: block;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+            margin: 0;
+        }
+        .navelements a:nth-child(5){
+            color: red;
+            border-bottom: none;
+        }
+        #toggle:checked+ .navelements{
+            display: block;
+        }
+        #toggle:checked+ .nav{
+            border-bottom: 0px;
+        }
+    }
+    body .card{
+        position:absolute;
+        right: 75%;
+        top:30%;
+        width: 300px;
+        height: 200px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(0, 0, 0, 0.329);
+        box-shadow: 0 15px 80px rgb(0, 0, 0);
+        overflow: hidden;
+    }
+    body .card:hover{
+        height: 400px;
+        transition: 0.4s;
+    }
+    body .card:hover .profile{
+        width: 120px;
+        height: 120px;
+        transition: 0.4s;
+    }
+    .card .profile{
+        position: absolute;
+        right: 34%;
+        top: 10px;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        background: rgba(0, 0, 0, 0.548);
+        overflow: hidden;
+        box-shadow: 0 15px 80px rgba(12, 11, 11, 0.788);
+    }
+    .card .profile img{
+        position: absolute;
+        width: 100%;
+        height: 110%;
+    }
+    .card .content{
+        position: absolute;        
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        font-weight: 100;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(250, 250, 237, 0.685);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+    .card .content h2{
+        position: absolute;
+        top: 122px;
+        font-size: 1.75em;
+        line-height: 1.2em;
+        opacity: 0.85;
+    }
+    .card .content h2 span{
+        font-size: 0.75;
+        font-weight: 100;
+        opacity: 0.65;
+
+    }
+    .card .content .data{
+        position: absolute;
+        display:flex;
+        top: 220px;
+        padding: 10px;
+        gap: 2rem;
+    }
+ .card  .actionbtn {
+    position: absolute;
+    top: 330px;
+    /* border: 3px solid red; */
+    width: 80%;
+    height: 8%;
+    display: flex;
+    justify-content: space-around;
+ }
+ .card .actionbtn button{
+     border: none;
+     border-radius: 2px;
+     background: rgba(241, 234, 234, 0.514);
+     font-size: 16px;
+     font-weight: 100;
+ }
+ .card .actionbtn button:nth-child(1){
+     background: rgba(236, 5, 5, 0.582);
+ }
+</style>
+</html>
